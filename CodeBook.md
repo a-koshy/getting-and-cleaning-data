@@ -1,6 +1,6 @@
 # Human Activity Recognition Using Smartphones
 
-### Human Activity Recognition Using Smartphones Dataset - `tidy_data.txt`
+### `tidy_data.txt` - Human Activity Recognition Using Smartphones Dataset
 
 Experiments were carried out with a group of 30 volunteers within an age bracket of 19-48 years. Each person performed six activities while wearing a smartphone on the waist. Data was collected from its embedded accelerometer and gyroscope.
 
@@ -77,18 +77,21 @@ f_body_body_gyro_jerk_mag_mean
 f_body_body_gyro_jerk_mag_std
 ```
 
-### Averages of each variable, activity and subject - `averages.txt`
+### `averages.txt` - Averages of each variable, activity and subject
 
 This data set has 180 rows and 68 columns. The columns are `subject`, `activity` and 66 variables, like `tidy_data.txt`. Each row contains a subject, activity, and for each variable, the mean value for that subject and activity.
 
 ### Work performed to clean the data
 
 To clean the original data set, the following steps were taken:
+
   1. Load the test data, training data, activities, subjects and variable names from the original data set.
   2. Restructure the data frames - add meaningful and consistent variable names to the columns, add columns for `subject` and `activity`, and rename the factors in `activity`.
   3. Subset the data set for columns containing `mean()` or `std()` in the variable name.
   4. Join the test and training data frames to form `tidy_data` and order the rows by `subject`.
   5. Write `tidy_data` to `tidy_data.txt`.
   6. Create a new data frame called `averages` with 68 columns and 180 rows, and name the columns with variable names from `tidy_data`.
-  7. Fill `averages` with the mean of each variable, for each subject and each activity. The means are calculated from `tidy_data`.
+  7. Fill `averages` with the mean of each variable, for each subject and each activity. The   means are calculated from `tidy_data`.
   8. Write `averages` to `averages.txt`.
+  
+More detailed notes can be found in the comments of run_analysis.R.
